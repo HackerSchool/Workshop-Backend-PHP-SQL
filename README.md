@@ -6,4 +6,5 @@ Tanto para utilizadores Linux como MS Windows ou Mac é necessário:
  
  * Cliente FTP - Recomendo o FileZilla: https://filezilla-project.org/download.php?type=client
  * Editor de Texto - Qualquer um serve, mas se estiverem a procura de um novo editor de texto recomendo Visual Studio Code: https://code.visualstudio.com/
+ * Activar os serviços de alojamento oferecidos aos membros do IST - Usando o link: https://selfservice.dsi.tecnico.ulisboa.pt/ activar os serviços: afs, shell, web e cgi.
 
