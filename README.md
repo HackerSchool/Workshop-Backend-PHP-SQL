@@ -8,3 +8,26 @@ Tanto para utilizadores Linux como MS Windows ou Mac é necessário:
  * Editor de Texto - Qualquer um serve, mas se estiverem a procura de um novo editor de texto recomendo Visual Studio Code: https://code.visualstudio.com/
  * Activar os serviços de alojamento oferecidos aos membros do IST - Usando o link: https://selfservice.dsi.tecnico.ulisboa.pt/ activar os serviços: afs, shell, web e cgi.
 
+## Estrutura de ficheiros
+
+````
+.
+├── sql
+│   └── create_tables         # Codigo SQL gerador das tabelas usadas neste workshop
+├── web
+│   ├── authentication.php    # Credencias para autenticar na base de dados
+│   ├── home.php              # Apresenta o fórum com as mensagens
+│   ├── index.htm             # Formulário de login
+│   ├── login.php             # Procede a autenticação
+│   ├── logo_HS.png           # Logotipo da HS
+│   ├── logout.php            # Procede ao logout
+│   ├── new_message.php       # Cria uma nova mensagem
+│   ├── sign_up.htm           # Formulário de registo
+│   └── sign_up.php           # Procede à criação de uma conta
+├── README.md                 # Este ficheiro
+└── GUIA.md                   # Guia pratico para a realização do workshop
+````
+
+## Guia
+
+Está também disponível um guia para facilitar o acompanhamento da workshop em [GUIA.md](./GUIA.md).
