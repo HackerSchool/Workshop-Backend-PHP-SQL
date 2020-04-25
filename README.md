@@ -28,6 +28,12 @@ Tanto para utilizadores Linux como MS Windows ou Mac é necessário:
 └── GUIA.md                   # Guia pratico para a realização do workshop
 ````
 
+## Estrutura da base de dados
+
+![Estrutura da base de dados](/sql_database.png)
+
 ## Guia
 
 Está também disponível um guia para facilitar o acompanhamento da workshop em [GUIA.md](./GUIA.md).
+
+Consultar https://www.w3schools.com/ para ajuda adicional em qualquer linguagem aqui mencionada ou usada isto é HTML, JS, CS, SQL e PHP.
