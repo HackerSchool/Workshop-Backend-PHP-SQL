@@ -55,7 +55,7 @@
 
 ## PHP/HTML
 
-22. Criar as paginas **index.htm** e **sign_up.htm** e vizualiza-las no browser localmente.
+24. Criar as paginas **index.htm** e **sign_up.htm** e vizualiza-las no browser localmente.
 
 23. Criar uma pasta na area pessoal do servidor do IST usando o FileZilla, esta pasta tem o nome HS e sera criada dentro do directório web. Ficando com o seguinte caminho para essa pasta **istXXXXXX/web/HS**.
 
