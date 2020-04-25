@@ -97,7 +97,7 @@
 
 ````
 
-27. Fazer upload das paginas recem criadas para a pasta HS na area pessoal do servidor do IST e verificar o seu correcto funcionamento.
+29. Fazer upload das paginas recem criadas para a pasta HS na area pessoal do servidor do IST e verificar o seu correcto funcionamento.
 
 28. Criar a pagina **logout.php** e fazer upload da mesma para o servidor, verificando o seu correcto funcionamento.
 
