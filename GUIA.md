@@ -1,5 +1,7 @@
 # Guia prático do workshop
 
+## SQL
+
 1. Construir o ficheiro **create_tables.sql**, capaz de criar uma tabela para guardar os dados do utilizador e outra tabela para guardar os dados associados à mensagem.
 
 2. Abrir o programa FileZilla e carregar no botão existente no canto superior esquerdo da janela (Open the site manager).
@@ -9,7 +11,7 @@
 	* Host: sigma.tecnico.ulisboa.pt
 	* Logon Type: Normal
 	* User: *istXXXXXX*
-	* Password *password_do_fenix*
+	* Password: *password_do_fenix*
 
 4. Carregar no botão Connect
 
@@ -33,9 +35,70 @@
 
 14. Escreve `SELECT * FROM member;` para vizualizar o conteudo da tabela member. 
 
-15. Escreve `INSERT INTO member VALUES("XXX","XXX","XXX")` para inserir na tabela member os valores colocados em values.
+15. Escreve `INSERT INTO member VALUES("XXX","XXX","XXX");` para inserir na tabela member uma fila com os valores colocados em values.
 
 16. Escreve `SELECT * FROM member;` para vizualizar o conteudo da tabela member.
 
-17. Escreve `INSERT INTO member VALUES("*ola*","XXX","XXX")` para inserir na tabela member os valores colocados em values.
+17. Escreve `INSERT INTO member VALUES("XXX","XXX","XXX");` para inserir na tabela member mais uma fila.
 
+18. Escreve `INSERT INTO messages VALUES("XXX","YYYY-MM-DD HH:MI:SS","XXX");` para inserir na tabela messages uma nova fila.
+
+19. Escreve `SELECT * FROM member WHERE name="XXX";` para vizualizar as filas da tabela member que respeitem o filtro colocado.
+
+20. Escreve `SELECT * FROM member, messages;` para ver uma união entre as duas tabelas.
+
+21. Escreve `SELECT * FROM member, messages WHERE messages.email=member=email;` para ver uma união das duas tabelas onde as colunas das tuas tabelas estão relacionadas.
+
+22. Escreve `DELETE FROM messages WHERE email="XXX";` para apagar as filas da tabela onde a condição exposta se verifica.
+
+23. Escreve `DELETE FROM member;` para todas as filas da tabela member.
+
+## PHP/HTML
+
+22. Criar as paginas **index.htm** e **sign_up.htm** e vizualiza-las no browser localmente.
+
+23. Criar uma pasta na area pessoal do servidor do IST usando o FileZilla, esta pasta tem o nome HS e sera criada dentro do directório web. Ficando com o seguinte caminho para essa pasta **istXXXXXX/web/HS**.
+
+24. Fazer upload destas duas paginas atravez do FileZilla para a pasta recem criada.
+
+25. Vizualizar o funcionamento destas duas paginas abrindo o browser na pagina **http://web.tecnico.ulisboa.pt/istXXXXXX/HS/**
+
+26. Criar as paginas **sign_up.php**, **login.php**, **home.php**. Vizualizar as paginas no browser, corroborando o incorrecto funcionamento das mesmas, uma vez que as paginas não foram processadas no servidor.
+	Nota - Utilizar o seguinte codigo para facilitar a contrução da pagina **home.php**
+
+````
+<html>
+	<head>
+		<title>HackerSchool Forum</title>
+	</head>
+	<body>
+		<table style="margin: auto; max-width: 800px; width: 100%; border: 3px solid green;">
+			<tr>
+				<th style="text-align: left;"><img src="logo_HS.png" width="200"></th>
+				<th style="text-align: right;"><p>Nome de utilizador<a href="logout.php">Log-out</a></p></th>
+			</tr>
+			<tr>
+				<th colspan="2" style="text-align: left;">Nome do utilizador at data:</th>
+			</tr>
+			<tr>
+				<th colspan="2" style="text-align: justify;">mensagem</th>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<form action="new_message.php" method="post">
+						<textarea name="text" rows="4" cols="50"></textarea>
+						<input type="submit" value="Send message">
+					</form>
+				</th>
+			</tr>
+		</table>
+	</body>
+</html>
+
+````
+
+27. Fazer upload das paginas recem criadas para a pasta HS na area pessoal do servidor do IST e verificar o seu correcto funcionamento.
+
+28. Criar a pagina **logout.php** e fazer upload da mesma para o servidor, verificando o seu correcto funcionamento.
+
+29. Completar a pagina **home.php** e ainda **new_message.php**. Fazer upload das mesmas e verificar o seu correcto funcionamento.
