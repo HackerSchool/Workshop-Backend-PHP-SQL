@@ -17,7 +17,7 @@
 
 5. A partir deste momento estás conectado ao servidor do IST, permitindo fazer transferências de ficheiros para a tua area pessoal do mesmo. Transfere o ficheiro **create_tables.sql**, para isso basta arrasta o ficheiro que criaste para o directório raiz da tua area pessoal isto é a pasta *istXXXXXX*. 
 
-6. Abrir uma linha de comandos (PowerShell se estiveres em Windows) e executar o comando `ssh istXXXXXX@sigma.tecnico.ulisboa.pt`, de forma a abrir uma linha de comandos remota no servidor do IST. Quando for pedida a password, colocar a password do fénix.
+6. Abrir uma linha de comandos e executar o comando `ssh istXXXXXX@sigma.tecnico.ulisboa.pt`, de forma a abrir uma linha de comandos remota no servidor do IST. Quando for pedida a password, colocar a password do fénix.
 
 7. Executando o comando `ls` na linha de comandos vizualizas uma listagem dos ficheiros no teu directorio remoto do servidor do IST. A partir deste momento deve ser possivel vizulizar o ficheiro **create_table.sql** que foi transferido para o servidor.
 
