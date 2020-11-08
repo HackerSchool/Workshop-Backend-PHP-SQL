@@ -49,13 +49,17 @@
 
 21. Escreve `SELECT * FROM member, messages WHERE messages.email=member=email;` para ver uma união das duas tabelas onde as colunas das tuas tabelas estão relacionadas.
 
+22. Escreve `SELECT * FROM messages WHERE text LIKE "%XXX%";` para ver uma mensagem cujo o conteudo inclua o valor *XXX*.
+
+23. Escreve `SELECT * FROM messages ORDER BY date ASC;` para ver as mensagens por ordem ascendente.
+
 22. Escreve `DELETE FROM messages WHERE email="XXX";` para apagar as filas da tabela onde a condição exposta se verifica.
 
 23. Escreve `DELETE FROM member;` para todas as filas da tabela member.
 
 ## PHP/HTML
 
-24. Criar a pagina **index.htm** e vizualiza-la no browser localmente.
+26. Criar a pagina **index.htm** e vizualiza-la no browser localmente.
 
 23. Criar uma pasta na area pessoal do servidor do IST usando o FileZilla, esta pasta tem o nome HS e sera criada dentro do directório web. Ficando com o seguinte caminho para essa pasta **istXXXXXX/web/HS**.
 
@@ -102,3 +106,15 @@
 28. Criar a pagina **logout.php** e fazer upload da mesma para o servidor, verificando o seu correcto funcionamento.
 
 29. Completar a pagina **home.php** e ainda **new_message.php**. Fazer upload das mesmas e verificar o seu correcto funcionamento.
+
+## Apagar os conteudos do workshop
+
+1. Ligar à tua area pessoal do servidor do IST usando o Filezilla usando os passos 2,3,4 deste guia se já tiveres o Filezilla configurado para aceder ao servidor do IST basta seguir o passo 2 selecionar o servidor do IST já criado e carregar em Connect.
+
+2. Eliminar o ficheiro **create_tables.sql** no directório raiz da tua area pessoal isto é a pasta *istXXXXXX*.
+
+3. Executar os passos 6, 9 e 10 do guia de modo a abrir uma sessão de ssh com o servidor do IST e de seguida abrir uma ligação com a base de dados usando o comando mysql.
+
+4. Escrever `drop table if exists messages;` para eliminar a tabela de mensagens da base de dados.
+
+5. Escrever `drop table if exists member;` para eliminar a tabela de membros da base de dados.
