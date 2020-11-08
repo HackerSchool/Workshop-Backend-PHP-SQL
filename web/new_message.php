@@ -1,8 +1,7 @@
 <?php
 include 'authentication.php';
 
-session_start();
-if (!isset($_SESSION['email'])) {
+if (!isset($_COOKIE['name'])) {
 	header('Location: index.htm');
 	exit();
 }
@@ -18,6 +17,18 @@ catch(PDOException $exception){
 	exit();
 }
 
+$sql = "SELECT email FROM member WHERE name=?";
+$statement = $connection->prepare($sql);
+
+if ($statement == FALSE){
+	$info = $connection->errorInfo();
+	echo("<p>Error: $info[2]</p>");
+	exit();
+}
+		
+$statement->execute(array($_COOKIE['name']));
+$result=$statement->fetch();
+
 $sql = "INSERT INTO messages VALUES (?,now(),?)";
 $statement = $connection->prepare($sql);
 
@@ -27,7 +38,7 @@ if ($statement == FALSE){
 	exit();
 }
 
-$statement->execute(array($_SESSION['email'],$message));
+$statement->execute(array($result['email'],$message));
 
 if ($statement == FALSE){
 	$info = $connection->errorInfo();

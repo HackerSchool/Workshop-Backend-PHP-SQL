@@ -1,6 +1,5 @@
 <?php
-session_start();
-if (!isset($_SESSION['email'])) {
+if (!isset($_COOKIE['name'])) {
 	header('Location: index.htm');
 	exit();
 }
@@ -34,7 +33,7 @@ if ($result == FALSE){
 		<table style="margin: auto; max-width: 800px; width: 100%; border: 3px solid green;">
 			<tr>
 				<th style="text-align: left;"><img src="logo_HS.png" width="200"></th>
-				<th style="text-align: right;"><p><?=$_SESSION['name']?> | <a href="logout.php">Log-out</a></p></th>
+				<th style="text-align: right;"><p><?=$_COOKIE['name']?> | <a href="logout.php">Log-out</a></p></th>
 			</tr>
 <?php
 foreach($result as $row):

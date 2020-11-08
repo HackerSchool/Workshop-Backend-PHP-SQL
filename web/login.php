@@ -2,9 +2,9 @@
 include 'authentication.php';
 
 $email = $_POST['email'];
-$password = $_POST['password'];
+$name = $_POST['name'];
 
-if(($email == "")||($password == "")){
+if(($email == "")||($name == "")){
 	echo("Please don't leave any empty field!");
 	exit();
 }
@@ -18,7 +18,7 @@ catch(PDOException $exception){
 	exit();
 }
 
-$sql = "SELECT name, password FROM member WHERE email=?";
+$sql = "SELECT name FROM member WHERE email=?";
 $statement = $connection->prepare($sql);
 
 if ($statement == FALSE){
@@ -31,19 +31,23 @@ $statement->execute(array($email));
 $result=$statement->fetch();
 
 if($result==FALSE){
-	echo("It was not found an account with the provided e-mail address");
+	$sql = "INSERT INTO member VALUES (?,?)";
+	$statement = $connection->prepare($sql);
+
+	if ($statement == FALSE){
+		$info = $connection->errorInfo();
+		echo("<p>Error: $info[2]</p>");
+		exit();
+	}
+
+	$statement->execute(array($email,$name));
+}elseif($result['name']!=$name){
+	echo("There is already a user that uses that e-mail with a diferent name");
 	exit();
 }
 
-if(password_verify($password,$result['password'])){
-	session_start();
-	session_regenerate_id(TRUE);
-	$_SESSION['name'] = $result['name'];
-	$_SESSION['email'] = $email;
-	header("Location: home.php");
-}else{
-	echo("The password is incorrect");
-}
+setcookie("name",$name);
+header("Location: home.php");
 
 $statement=null;
 $connection=null;
