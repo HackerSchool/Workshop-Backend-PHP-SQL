@@ -21,9 +21,7 @@ Tanto para utilizadores Linux como MS Windows ou Mac é necessário:
 │   ├── login.php             # Procede a autenticação
 │   ├── logo_HS.png           # Logotipo da HS
 │   ├── logout.php            # Procede ao logout
-│   ├── new_message.php       # Cria uma nova mensagem
-│   ├── sign_up.htm           # Formulário de registo
-│   └── sign_up.php           # Procede à criação de uma conta
+│   └── new_message.php       # Cria uma nova mensagem
 ├── README.md                 # Este ficheiro
 └── GUIA.md                   # Guia pratico para a realização do workshop
 ````

@@ -35,11 +35,11 @@
 
 14. Escreve `SELECT * FROM member;` para vizualizar o conteudo da tabela member. 
 
-15. Escreve `INSERT INTO member VALUES("XXX","XXX","XXX");` para inserir na tabela member uma fila com os valores colocados em values.
+15. Escreve `INSERT INTO member VALUES("XXX","XXX");` para inserir na tabela member uma fila com os valores colocados em values.
 
 16. Escreve `SELECT * FROM member;` para vizualizar o conteudo da tabela member.
 
-17. Escreve `INSERT INTO member VALUES("XXX","XXX","XXX");` para inserir na tabela member mais uma fila.
+17. Escreve `INSERT INTO member VALUES("XXX","XXX");` para inserir na tabela member mais uma fila.
 
 18. Escreve `INSERT INTO messages VALUES("XXX","YYYY-MM-DD HH:MI:SS","XXX");` para inserir na tabela messages uma nova fila.
 
@@ -55,7 +55,7 @@
 
 ## PHP/HTML
 
-24. Criar as paginas **index.htm** e **sign_up.htm** e vizualiza-las no browser localmente.
+24. Criar a pagina **index.htm** e vizualiza-la no browser localmente.
 
 23. Criar uma pasta na area pessoal do servidor do IST usando o FileZilla, esta pasta tem o nome HS e sera criada dentro do directório web. Ficando com o seguinte caminho para essa pasta **istXXXXXX/web/HS**.
 
@@ -63,7 +63,7 @@
 
 25. Vizualizar o funcionamento destas duas paginas abrindo o browser na pagina **http://web.tecnico.ulisboa.pt/istXXXXXX/HS/**
 
-26. Criar as paginas **sign_up.php**, **login.php**, **home.php**. Vizualizar as paginas no browser, corroborando o incorrecto funcionamento das mesmas, uma vez que as paginas não foram processadas no servidor.
+26. Criar as paginas **authentication.php**, **login.php**, **home.php**. Vizualizar as paginas no browser, corroborando o incorrecto funcionamento das mesmas, uma vez que as paginas não foram processadas no servidor.
 	Nota - Utilizar o seguinte codigo para facilitar a contrução da pagina **home.php**
 
 ````
