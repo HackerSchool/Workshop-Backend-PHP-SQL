@@ -47,7 +47,7 @@
 
 20. Escreve `SELECT * FROM member, messages;` para ver uma união entre as duas tabelas.
 
-21. Escreve `SELECT * FROM member, messages WHERE messages.email=member=email;` para ver uma união das duas tabelas onde as colunas das tuas tabelas estão relacionadas.
+21. Escreve `SELECT * FROM member, messages WHERE messages.email=member.email;` para ver uma união das duas tabelas onde as colunas das tuas tabelas estão relacionadas.
 
 22. Escreve `SELECT * FROM messages WHERE text LIKE "%XXX%";` para ver uma mensagem cujo o conteudo inclua o valor *XXX*.
 
