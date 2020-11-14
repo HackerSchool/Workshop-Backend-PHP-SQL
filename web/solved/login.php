@@ -46,7 +46,7 @@ if($result==FALSE){
 	exit();
 }
 
-setcookie("name",$name);
+setcookie("email",$email);
 header("Location: home.php");
 
 $statement=null;

@@ -1,5 +1,5 @@
 <?php
-if (!isset($_COOKIE['name'])) {
+if (!isset($_COOKIE['email'])) {
 	header('Location: index.htm');
 	exit();
 }
@@ -14,6 +14,20 @@ catch(PDOException $exception){
 	echo($exception->getMessage());
 	exit();
 }
+
+$sql = "SELECT name FROM member WHERE email=?";
+$statement = $connection->prepare($sql);
+
+if ($statement == FALSE){
+	$info = $connection->errorInfo();
+	echo("<p>Error: $info[2]</p>");
+	exit();
+}
+		
+$statement->execute(array($_COOKIE['email']));
+$result=$statement->fetch();
+
+$name=$result['name'];
 
 $sql = "SELECT member.name AS name, member.email AS email, messages.date AS date, messages.text AS text FROM member, messages WHERE member.email=messages.email ORDER BY messages.date ASC";
 $result = $connection->query($sql);
@@ -33,7 +47,7 @@ if ($result == FALSE){
 		<table style="margin: auto; max-width: 800px; width: 100%; border: 3px solid green;">
 			<tr>
 				<th style="text-align: left;"><img src="logo_HS.png" width="200"></th>
-				<th style="text-align: right;"><p><?=$_COOKIE['name']?> | <a href="logout.php">Log-out</a></p></th>
+				<th style="text-align: right;"><p><?=$name?> | <a href="logout.php">Log-out</a></p></th>
 			</tr>
 <?php
 foreach($result as $row):

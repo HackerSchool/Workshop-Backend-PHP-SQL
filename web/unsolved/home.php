@@ -16,6 +16,20 @@ catch(PDOException $exception){
 }
 
 $sql = //TO DO
+$statement = //TO DO
+
+if ($statement == FALSE){
+	$info = $connection->errorInfo();
+	echo("<p>Error: $info[2]</p>");
+	exit();
+}
+		
+$statement->//TO DO
+$result=//TO DO
+
+$name=//TO DO
+
+$sql = //TO DO
 $result = //TO DO
 
 if ($result == FALSE){
